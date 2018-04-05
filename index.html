@@ -13,25 +13,36 @@
   <body>
     <div class="container">
     <h1>Marathi terms entry interface</h1>
+    <p>This is purely for testing/demo, with data saved only for the session.
+      A random entry appears.
+      You can copy the <em>target</em> if it seems fine. </p>
 
-    <div class="lead">
-      Location: <p id="location"></p>
-    </div>
-    <div class="lead">
-      String: <p id="string"></p>
-    </div>
-    <div class="lead">
-      Target: <p id="targ"></p>
-    </div>
+    <table class="table table-striped">
+      <tr>
+        <td>Location</td><td id="location"></td>
+      </tr>
+      <tr>
+        <td>String</td><td id="string"></td>
+      </tr>
+      <tr>
+        <td>Target</td><td id="targ"></td>
+      </tr>
+      <tr>
+        <td>Translation</td>
+        <td>
+          <input id="trans" type="text" name="" value="" placeholder="translation">
+        </td>
+      </tr>
+    </table>
 
-    <div class="lead">
-    <p>Marathi term:
-    <span class="output">
-    </span>
-    </p>
+
+    <button type="button" name="start" class="btn btn-primary" onclick="start()">start speech</button>
+    <button type="button" name="copy" class="btn btn-secondary" onclick="copy()">use target</button>
+    <button type="button" name="accept" class="btn btn-success" onclick="save()">save</button>
+    <p id="log" class="lead"></p>
   </div>
   </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
