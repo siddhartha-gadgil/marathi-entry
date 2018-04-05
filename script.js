@@ -9,8 +9,19 @@ recognition.interimResults = false;
 recognition.maxAlternatives = 1;
 
 var diagnostic = document.querySelector('.output');
+var str = document.querySelector('#string');
+var loc = document.querySelector('#location');
+var targ = document.querySelector('#targ');
+
 
 var data = {}
+
+function showData(n){
+  var ob = data[n];
+  str.textContent = ob['string'];
+  loc.textContent = ob['location'];
+  targ.textContent = ob['target'];
+}
 
 fetch("data/qgis.json")
 .then(function(response) {
